@@ -10,6 +10,7 @@ import {
   faSquare,
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+
 const Sidebar = () => (
   <div className="nav-bar">
     <Link className="logo" to="/">
