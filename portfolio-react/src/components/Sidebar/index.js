@@ -18,11 +18,10 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 const Sidebar = (props) => {
   const [headerActive, setHeaderActive] = useState()
   const [navClass, setNavClass] = useState('nav-bar')
-  console.log(props)
-  if (props.navClass === null) setNavClass('nav-bar hidden')
+  console.log(props.navClass)
   //default value OR value sent from prop should be the logic
   return (
-    <div className={navClass}>
+    <div className={props.navClass}>
       <Link className="logo" to="/">
         <img src={LogoBgBlk} alt="logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="eric" />

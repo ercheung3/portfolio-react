@@ -13,22 +13,23 @@ const Header = () => {
 
   const [isOpen, setOpen] = useState(false)
 
+  const toggleIsOpen = () => {
+    if (isOpen) setNavClass('nav-bar hidden')
+    else setNavClass('nav-bar')
+
+    setOpen(!isOpen)
+  }
+
   return (
     <>
       <div className="header">
         <Link className="logo" to="/">
           <img src={LogoBgBlk} alt="logo" />
         </Link>
-        <button
-          onClick={() => {
-            setOpen(!isOpen)
-          }}
-        >
-          HELLO
-        </button>
+        <button onClick={toggleIsOpen}> HELLO </button>
       </div>
 
-      <Sidebar props={navClass} />
+      <Sidebar navClass={navClass} />
     </>
   )
 }
