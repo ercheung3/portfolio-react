@@ -6,6 +6,7 @@ import LogoSubtitle from '../../assets/images/logo-subtitle-black-montserrat.png
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Sidebar from '../Sidebar'
+import MenuToggle from '../MenuToggle'
 import './index.scss'
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
         <Link className="logo" to="/">
           <img src={LogoBgBlk} alt="logo" />
         </Link>
-        <button onClick={toggleIsOpen}> HELLO </button>
+        <MenuToggle isOpen={isOpen} toggle={toggleIsOpen} />
       </div>
 
       <Sidebar navClass={navClass} />
