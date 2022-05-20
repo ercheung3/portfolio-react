@@ -10,19 +10,20 @@
     z-index: 3;
     //prevents overflow to container
     min-height: 500px;
-    border-right: 5px solid $primary-color;
-
+    border-right: 5px solid transparent;
+    box-shadow: 0px 3px 10px 0px rgb(38 59 94 / 29%);
     .logo {
       display: block;
       padding: 8px 0;
 
       img {
         display: block;
-        margin: 8px auto;
+        margin: 0px auto;
         width: 50%;
         height: auto;
 
         &.sub-logo {
+          padding: 0;
           width: 75%;
         }
       }
@@ -79,16 +80,19 @@
       a.home-link {
         &:after {
           content: 'home';
+          border-right: 0.5em solid $primary-color;
         }
       }
       a.about-link {
         &:after {
           content: 'about';
+          border-right: 0.5em solid $primary-color;
         }
       }
       a.contact-link {
         &:after {
           content: 'contact';
+          border-right: 0.5em solid $primary-color;
         }
       }
 

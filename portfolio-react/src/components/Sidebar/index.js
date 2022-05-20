@@ -15,11 +15,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const [headerActive, setHeaderActive] = useState()
-
+  const [navClass, setNavClass] = useState('nav-bar')
+  console.log(props)
+  if (props.navClass === null) setNavClass('nav-bar hidden')
+  //default value OR value sent from prop should be the logic
   return (
-    <div className="nav-bar">
+    <div className={navClass}>
       <Link className="logo" to="/">
         <img src={LogoBgBlk} alt="logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="eric" />
