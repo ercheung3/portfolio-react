@@ -1,7 +1,7 @@
 @import '../../App.scss';
 
 .nav-bar {
-  @include responsive($lg) {
+  @include responsive($med) {
     background: $secondary-color;
     width: 80px;
     height: 100%;
