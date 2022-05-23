@@ -1,21 +1,28 @@
 @import '../../App.scss';
 
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  height: 5em;
+  height: 4.5em;
   width: 100%;
   background: $tertiary-color;
+  visibility: visible;
+  animation: fadeIn 2s forwards;
 
+  @include responsive($med) {
+    visibility: hidden;
+  }
   .logo {
     display: block;
     height: 100%;
+    width: 45px;
 
     img {
       display: block;
       height: 100%;
+      width: 100%;
     }
   }
 }

@@ -5,13 +5,19 @@
   opacity: 0;
   animation: bounceIn 1s 1s;
   animation-fill-mode: forwards;
-  min-width: 10px;
+  min-width: 3px;
+  @include responsive($med) {
+    min-width: 10px;
+  }
 }
 
 .text-animate-hover {
-  min-width: 10px;
+  min-width: 3px;
   display: inline-block;
   animation-fill-mode: both;
+  @include responsive($med) {
+    min-width: 10px;
+  }
 
   &:hover {
     animation: rubberBand 1s;
