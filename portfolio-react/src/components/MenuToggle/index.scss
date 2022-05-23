@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+.menu-button {
+  position: absolute;
+  z-index: 5000;
+  top: 5px;
+  right: 0px;
+  visibility: visible;
+  animation: fadeIn 1s forwards;
+
+  @include responsive($med) {
+    visibility: hidden;
+    animation: fadeOut 1s forwards;
+  }
+}

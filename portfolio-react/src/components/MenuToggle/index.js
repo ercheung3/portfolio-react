@@ -10,24 +10,27 @@ const Path = (props) => (
   />
 )
 
-const transition = { duration: 0.33 }
+const transition = { duration: 0.5 }
 
 const MenuToggle = (props) => {
+  const size = 46
+  const color = 'hsl(21, 84%, 67%)'
+  const blackColor = 'hsl(0, 0%, 18%)'
   return (
-    <button onClick={props.toggle}>
-      <svg width="23" height="23" viewBox="0 0 23 23">
+    <div className="menu-button" onClick={props.toggle}>
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
         <Path
           animate={props.isOpen ? 'open' : 'closed'}
           initial={false}
           variants={{
-            closed: { d: 'M 2 2.5 L 20 2.5', stroke: 'hsl(0, 0%, 18%)' },
-            open: { d: 'M 3 16.5 L 17 2.5', stroke: 'hsl(0, 0%, 18%)' },
+            closed: { d: 'M 2 5 L 40 5', stroke: `${color}` },
+            open: { d: 'M 3 32.782 L 34 5', stroke: `${color}` },
           }}
           transition={transition}
         />
         <Path
-          d="M 2 9.423 L 20 9.423"
-          stroke="hsl(0, 0%, 18%)"
+          d="M 2 18.846 L 40 18.846"
+          stroke={`${color}`}
           animate={props.isOpen ? 'open' : 'closed'}
           initial={false}
           variants={{
@@ -40,13 +43,13 @@ const MenuToggle = (props) => {
           animate={props.isOpen ? 'open' : 'closed'}
           initial={false}
           variants={{
-            closed: { d: 'M 2 16.346 L 20 16.346', stroke: 'hsl(0, 0%, 18%)' },
-            open: { d: 'M 3 2.5 L 17 16.346', stroke: 'hsl(0, 0%, 18%)' },
+            closed: { d: 'M 2 32.782 L 40 32.782', stroke: `${color}` },
+            open: { d: 'M 3 5 L 34 32.782', stroke: `${color}` },
           }}
           transition={transition}
         />
       </svg>
-    </button>
+    </div>
   )
 }
 

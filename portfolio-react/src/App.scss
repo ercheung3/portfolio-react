@@ -4,9 +4,13 @@ $tertiary-color: #d3d0d0;
 
 $xl: 1201px; // 4k and hi-res desktop
 $lg: 1025px; // 1080 and hi-res laptops
-$med: 769px; // hi-res tablets and low-res laptops
+$med: 768px; // hi-res tablets and low-res laptops
 $sm: 481px; // mobile and low-res tablets
 $xs: 320px; // mobile only
+
+.App {
+  width: 100%;
+}
 
 @mixin responsive($query) {
   @media (min-width: $query) {

@@ -12,7 +12,7 @@ import './index.scss'
 const Header = () => {
   const [navClass, setNavClass] = useState('nav-bar')
 
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(true)
 
   const toggleIsOpen = () => {
     if (isOpen) setNavClass('nav-bar hidden')
