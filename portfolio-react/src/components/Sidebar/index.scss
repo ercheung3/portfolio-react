@@ -13,7 +13,7 @@
   z-index: 3;
   //prevents overflow to container
   min-height: 500px;
-  border-right: 5px solid transparent;
+  border-right: 0.3em solid transparent;
   box-shadow: 0px 3px 10px 0px rgb(38 59 94 / 29%);
   animation: slideInLeft 0.5s backwards;
 
@@ -70,8 +70,8 @@
 
       &:after {
         content: '';
-        font-size: 1em;
-        letter-spacing: 2px;
+        font-size: 0.75em;
+        letter-spacing: 1px;
         position: absolute;
         bottom: 0;
         display: block;
@@ -85,19 +85,19 @@
     a.home-link {
       &:after {
         content: 'home';
-        border-right: 0.5em solid $primary-color;
+        border-right: 0.3em solid $primary-color;
       }
     }
     a.about-link {
       &:after {
         content: 'about';
-        border-right: 0.5em solid $primary-color;
+        border-right: 0.3em solid $primary-color;
       }
     }
     a.contact-link {
       &:after {
         content: 'contact';
-        border-right: 0.5em solid $primary-color;
+        border-right: 0.3em solid $primary-color;
       }
     }
 
@@ -137,6 +137,6 @@
   }
 
   @include responsive($lg) {
-    width: 5em;
+    width: 6.5em;
   }
 }
